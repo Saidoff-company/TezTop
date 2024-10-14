@@ -27,8 +27,7 @@ urlpatterns = [
     path("i18n/", include("django.conf.urls.i18n")),
     path('admin/', admin.site.urls),
     # local apps
-    path('api/v1/users/', include('users.urls')),
-
+    path('api/v1/accounts/', include('accounts.urls')),
     # swagger
     path('swagger<format>/', schema_view.without_ui(cache_timeout=0), name='schema-json'),
     path('', schema_view.with_ui('swagger', cache_timeout=0), name='schema-swagger-ui'),
